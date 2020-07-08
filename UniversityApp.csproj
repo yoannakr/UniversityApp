@@ -58,14 +58,24 @@
     <Compile Include="AddStudentPage.xaml.cs">
       <DependentUpon>AddStudentPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddTeacherPage.xaml.cs">
+      <DependentUpon>AddTeacherPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AllStudentsPage.xaml.cs">
       <DependentUpon>AllStudentsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AllTeachersPage.xaml.cs">
+      <DependentUpon>AllTeachersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Information.cs" />
     <Compile Include="SaveXml.cs" />
     <Compile Include="StudentInformation.cs" />
     <Compile Include="StudentInformationPage.xaml.cs">
       <DependentUpon>StudentInformationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherInformation.cs" />
+    <Compile Include="TeacherInformationPage.xaml.cs">
+      <DependentUpon>TeacherInformationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UniversityHome.xaml.cs">
       <DependentUpon>UniversityHome.xaml</DependentUpon>
@@ -74,7 +84,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="AddTeacherPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AllStudentsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AllTeachersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -91,6 +109,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="StudentInformationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TeacherInformationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -127,9 +149,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="home_picture.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Students.xml" />

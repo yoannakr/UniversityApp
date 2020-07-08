@@ -4,11 +4,11 @@ using System.Windows.Controls;
 namespace UniversityApp
 {
     /// <summary>
-    /// Interaction logic for StudentInformationPage.xaml
+    /// Interaction logic for TeacherInformationPage.xaml
     /// </summary>
-    public partial class StudentInformationPage : Page
+    public partial class TeacherInformationPage : Page
     {
-        public StudentInformationPage()
+        public TeacherInformationPage()
         {
             InitializeComponent();
         }

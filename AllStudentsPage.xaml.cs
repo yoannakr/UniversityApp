@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace UniversityApp
 {
@@ -47,9 +36,20 @@ namespace UniversityApp
                 MessageBox.Show("Select one!");
             }
 
-            int studentId = Convert.ToInt32(allStudentsListBox.SelectedValue.ToString()[0]);
+            int studentId = Convert.ToInt32(allStudentsListBox.SelectedValue.ToString()[0].ToString());
+
+            StudentInformation studentInformation = MainWindow.students[studentId - 1];
+
             StudentInformationPage studentInformationPage = new StudentInformationPage();
-            studentInformationPage.textBoxAge.Text = "20";
+
+            studentInformationPage.textBoxFirstName.Text = studentInformation.FirstName;
+            studentInformationPage.textBoxLastName.Text = studentInformation.LastName;
+            studentInformationPage.datePickerBirthDate.Text = studentInformation.BirthDate.ToString();
+            studentInformationPage.textBoxAge.Text = studentInformation.Age.ToString();
+            studentInformationPage.textBoxEGN.Text = studentInformation.EGN.ToString();
+            studentInformationPage.textBoxFacNo.Text = studentInformation.FacNo.ToString();
+            studentInformationPage.textBoxGender.Text = studentInformation.Gender;
+
             this.NavigationService.Navigate(studentInformationPage);
         }
     }

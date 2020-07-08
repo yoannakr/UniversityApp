@@ -2,12 +2,12 @@
 <ArrayOfStudentInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <StudentInformation>
     <Id>1</Id>
-    <FirstName>rr</FirstName>
-    <LastName>rr</LastName>
+    <FirstName>ivan</FirstName>
+    <LastName>ivan</LastName>
     <BirthDate>2020-07-08T00:00:00</BirthDate>
     <Age>20</Age>
-    <EGN>9916541528</EGN>
+    <EGN>1234567891</EGN>
     <Gender>Male</Gender>
-    <FacNo>4444444444</FacNo>
+    <FacNo>123456789</FacNo>
   </StudentInformation>
 </ArrayOfStudentInformation>

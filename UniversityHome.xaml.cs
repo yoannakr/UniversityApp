@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace UniversityApp
 {
@@ -40,9 +28,17 @@ namespace UniversityApp
                     AddStudentPage addStudentPage = new AddStudentPage();
                     this.NavigationService.Navigate(addStudentPage);
                     break;
+                case "Add Teacher":
+                    AddTeacherPage addTeacherPage = new AddTeacherPage();
+                    this.NavigationService.Navigate(addTeacherPage);
+                    break;
                 case "All Students":
                     AllStudentsPage allStudentsPage = new AllStudentsPage();
                     this.NavigationService.Navigate(allStudentsPage);
+                    break;
+                case "All Teachers":
+                    AllTeachersPage allTeachersPage = new AllTeachersPage();
+                    this.NavigationService.Navigate(allTeachersPage);
                     break;
                 default:
                     MessageBox.Show("Error");

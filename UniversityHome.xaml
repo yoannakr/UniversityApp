@@ -31,7 +31,7 @@
 
         <ListBox Name="optionListBox" Grid.Column="1" Grid.Row="2" Margin="0,0,15,0" SelectedValuePath="Content">
             <ListBoxItem Content="Add Student"></ListBoxItem>
-            <ListBoxItem Content="Add teacher"></ListBoxItem>
+            <ListBoxItem Content="Add Teacher"></ListBoxItem>
             <ListBoxItem Content="All Students"></ListBoxItem>
             <ListBoxItem Content="All Teachers"></ListBoxItem>
         </ListBox>
