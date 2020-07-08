@@ -55,44 +55,44 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddStudentPage.xaml.cs">
+    <Compile Include="Students\AddStudentPage.xaml.cs">
       <DependentUpon>AddStudentPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddTeacherPage.xaml.cs">
+    <Compile Include="Teachers\AddTeacherPage.xaml.cs">
       <DependentUpon>AddTeacherPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AllStudentsPage.xaml.cs">
+    <Compile Include="Students\AllStudentsPage.xaml.cs">
       <DependentUpon>AllStudentsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AllTeachersPage.xaml.cs">
+    <Compile Include="Teachers\AllTeachersPage.xaml.cs">
       <DependentUpon>AllTeachersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Information.cs" />
     <Compile Include="SaveXml.cs" />
-    <Compile Include="StudentInformation.cs" />
-    <Compile Include="StudentInformationPage.xaml.cs">
+    <Compile Include="Students\StudentInformation.cs" />
+    <Compile Include="Students\StudentInformationPage.xaml.cs">
       <DependentUpon>StudentInformationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TeacherInformation.cs" />
-    <Compile Include="TeacherInformationPage.xaml.cs">
+    <Compile Include="Teachers\TeacherInformation.cs" />
+    <Compile Include="Teachers\TeacherInformationPage.xaml.cs">
       <DependentUpon>TeacherInformationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="UniversityHome.xaml.cs">
       <DependentUpon>UniversityHome.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddStudentPage.xaml">
+    <Page Include="Students\AddStudentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddTeacherPage.xaml">
+    <Page Include="Teachers\AddTeacherPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AllStudentsPage.xaml">
+    <Page Include="Students\AllStudentsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AllTeachersPage.xaml">
+    <Page Include="Teachers\AllTeachersPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -108,11 +108,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="StudentInformationPage.xaml">
+    <Page Include="Students\StudentInformationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TeacherInformationPage.xaml">
+    <Page Include="Teachers\TeacherInformationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Windows.Navigation;
-
+using UniversityApp.Students;
+using UniversityApp.Teachers;
 
 namespace UniversityApp
 {

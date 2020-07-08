@@ -1,4 +1,4 @@
-﻿namespace UniversityApp
+﻿namespace UniversityApp.Teachers
 {
     public class TeacherInformation : Information
     {

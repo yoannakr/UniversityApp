@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
+using UniversityApp.Teachers;
 
 namespace UniversityApp
 {
     /// <summary>
-    /// Interaction logic for AddStudentPage.xaml
+    /// Interaction logic for AddTeacherPage.xaml
     /// </summary>
-    public partial class AddStudentPage : Page
+    public partial class AddTeacherPage : Page
     {
         private string gender = String.Empty;
 
-        public AddStudentPage()
+        public AddTeacherPage()
         {
             InitializeComponent();
         }
@@ -22,7 +23,7 @@ namespace UniversityApp
             this.NavigationService.Navigate(universityHome);
         }
 
-        private void AddStudent_Click(object sender, RoutedEventArgs e)
+        private void AddTeacher_Click(object sender, RoutedEventArgs e)
         {
             bool isCorrect = true;
 
@@ -33,7 +34,7 @@ namespace UniversityApp
                        int.Parse(textBoxAge.Text.ToString()) < 0 ||
                        !datePickerBirthDate.SelectedDate.HasValue ||
                        textBoxEGN.Text.Length != 10 ||
-                       textBoxFacNo.Text.Length != 9
+                       textBoxSubject.Text.Length == 0
                     )
                 {
                     isCorrect = false;
@@ -50,22 +51,23 @@ namespace UniversityApp
             {
                 try
                 {
-                    StudentInformation student = new StudentInformation()
+                    TeacherInformation teacher = new TeacherInformation()
                     {
-                        Id = MainWindow.students.Count + 1,
+                        Id = MainWindow.teachers.Count + 1,
                         FirstName = textBoxFirstName.Text.ToString(),
                         LastName = textBoxLastName.Text.ToString(),
                         BirthDate = (DateTime)(datePickerBirthDate.SelectedDate),
                         Age = int.Parse(textBoxAge.Text.ToString()),
                         EGN = long.Parse(textBoxEGN.Text.ToString()),
-                        FacNo = long.Parse(textBoxFacNo.Text.ToString()),
+                        Subject = textBoxSubject.Text.ToString(),
                         Gender = gender
                     };
 
-                    MainWindow.students.Add(student);
+                    MainWindow.teachers.Add(teacher);
 
-                    SaveXml<StudentInformation>.SaveData(MainWindow.students, @"Students.xml"); // add path 
-                    MessageBox.Show($"Student with Fac No: {student.FacNo} was added!");
+                    SaveXml<TeacherInformation>.SaveData(MainWindow.teachers, @"Teachers.xml"); // add path
+
+                    MessageBox.Show($"Teacher with last name {teacher.LastName} was added!");
                 }
                 catch (Exception ex)
                 {
@@ -89,6 +91,5 @@ namespace UniversityApp
                 return;
             gender = radioButton.Content.ToString();
         }
-
     }
 }
