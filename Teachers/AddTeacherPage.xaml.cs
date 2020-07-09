@@ -31,7 +31,6 @@ namespace UniversityApp
             {
                 if (textBlockFirstname.Text.Length == 0 ||
                        textBoxLastName.Text.Length == 0 ||
-                       int.Parse(textBoxAge.Text.ToString()) < 0 ||
                        !datePickerBirthDate.SelectedDate.HasValue ||
                        textBoxEGN.Text.Length != 10 ||
                        textBoxSubject.Text.Length == 0
@@ -47,25 +46,33 @@ namespace UniversityApp
                 MessageBox.Show("Please fill in all fields!");
             }
 
+            DateTime birthDate = (DateTime)(datePickerBirthDate.SelectedDate);
+
+            TeacherInformation teacher = new TeacherInformation();
+            int age = teacher.CalculateAge(birthDate);
+
+            if (age < 7 || age > 100)
+            {
+                isCorrect = false;
+                MessageBox.Show("You need to be between 7 and 100 age!");
+            }
+
             if (isCorrect)
             {
                 try
                 {
-                    TeacherInformation teacher = new TeacherInformation()
-                    {
-                        Id = MainWindow.teachers.Count + 1,
-                        FirstName = textBoxFirstName.Text.ToString(),
-                        LastName = textBoxLastName.Text.ToString(),
-                        BirthDate = (DateTime)(datePickerBirthDate.SelectedDate),
-                        Age = int.Parse(textBoxAge.Text.ToString()),
-                        EGN = long.Parse(textBoxEGN.Text.ToString()),
-                        Subject = textBoxSubject.Text.ToString(),
-                        Gender = gender
-                    };
+                    teacher.Id = MainWindow.teachers.Count + 1;
+                    teacher.FirstName = textBoxFirstName.Text.ToString();
+                    teacher.LastName = textBoxLastName.Text.ToString();
+                    teacher.BirthDate = (DateTime)(datePickerBirthDate.SelectedDate);
+                    teacher.Age = age;
+                    teacher.EGN = long.Parse(textBoxEGN.Text.ToString());
+                    teacher.Subject = textBoxSubject.Text.ToString();
+                    teacher.Gender = gender;
 
                     MainWindow.teachers.Add(teacher);
 
-                    SaveXml<TeacherInformation>.SaveData(MainWindow.teachers, @"Teachers.xml"); // add path
+                    SaveXml<TeacherInformation>.SaveData(MainWindow.teachers, @"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Teachers.xml"); // add path
 
                     MessageBox.Show($"Teacher with last name {teacher.LastName} was added!");
                 }

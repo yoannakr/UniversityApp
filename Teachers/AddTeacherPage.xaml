@@ -38,18 +38,16 @@
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,20,0,0" Name="textBlockFirstname" Text="First Name:" VerticalAlignment="Top" Width="110" />
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,50,0,0" Name="textBlockLastName" Text="Last Name:" VerticalAlignment="Top" Width="110" />
             <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,80,0,0" Name="textBlockBirthDate" Text="Birth Date" VerticalAlignment="Top" Width="110" />
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,107,0,0" Name="textBlockAge" Text="Age:" VerticalAlignment="Top" Width="110"  />
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,136,0,0" Name="textBlockEGN" Text="EGN:" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" />
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,166,0,0" Name="textBlockSubject" Text="Subject:" VerticalAlignment="Top" Width="110" />
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,196,0,0" Name="textBlockGender" Text="Gender:" VerticalAlignment="Top" Width="110" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,107,0,0" Name="textBlockEGN" Text="EGN:" VerticalAlignment="Top" Width="110" Grid.RowSpan="2" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,136,0,0" Name="textBlockSubject" Text="Subject:" VerticalAlignment="Top" Width="110" />
+            <TextBlock Height="23" HorizontalAlignment="Left" Margin="67,166,0,0" Name="textBlockGender" Text="Gender:" VerticalAlignment="Top" Width="110" />
             <!-- To fill field -->
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,20,0,0" Name="textBoxFirstName" VerticalAlignment="Top" Width="222" />
             <TextBox Height="23" HorizontalAlignment="Left" Margin="183,50,0,0" Name="textBoxLastName" VerticalAlignment="Top" Width="222" />
             <DatePicker Height="23" HorizontalAlignment="Left" Margin="183,80,0,0" Name="datePickerBirthDate" VerticalAlignment="Top" Width="222" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,107,0,0" Name="textBoxAge" VerticalAlignment="Top" Width="222" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,136,0,0" Name="textBoxEGN" VerticalAlignment="Top" Width="222" />
-            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,166,0,0" Name="textBoxSubject" VerticalAlignment="Top" Width="222" />
-            <StackPanel Height="50" HorizontalAlignment="Left" Margin="183,0,0,10" VerticalAlignment="Bottom" Width="222">
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,107,0,0" Name="textBoxEGN" VerticalAlignment="Top" Width="222" />
+            <TextBox Height="23" HorizontalAlignment="Left" Margin="183,136,0,0" Name="textBoxSubject" VerticalAlignment="Top" Width="222" />
+            <StackPanel Height="50" HorizontalAlignment="Left" Margin="183,0,0,40" VerticalAlignment="Bottom" Width="222">
                 <RadioButton GroupName="gender" Checked="RadioButtonChecked">Male</RadioButton>
                 <RadioButton GroupName="gender" Checked="RadioButtonChecked">Female</RadioButton>
             </StackPanel>

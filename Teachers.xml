@@ -2,12 +2,12 @@
 <ArrayOfTeacherInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <TeacherInformation>
     <Id>1</Id>
-    <FirstName>penka</FirstName>
-    <LastName>penka</LastName>
-    <BirthDate>2020-07-04T00:00:00</BirthDate>
-    <Age>20</Age>
+    <FirstName>va</FirstName>
+    <LastName>va</LastName>
+    <BirthDate>2013-07-08T00:00:00</BirthDate>
+    <Age>7</Age>
     <EGN>1234567891</EGN>
     <Gender>Male</Gender>
-    <Subject>math</Subject>
+    <Subject>123456789</Subject>
   </TeacherInformation>
 </ArrayOfTeacherInformation>
