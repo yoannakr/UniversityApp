@@ -84,6 +84,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="IInformation.cs" />
+    <Compile Include="ReadXml.cs" />
     <Compile Include="Students\AddStudentPage.xaml.cs">
       <DependentUpon>AddStudentPage.xaml</DependentUpon>
     </Compile>

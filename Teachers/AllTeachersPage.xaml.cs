@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using UniversityApp.Teachers;
@@ -10,6 +11,8 @@ namespace UniversityApp
     /// </summary>
     public partial class AllTeachersPage : Page
     {
+        private readonly List<TeacherInformation> teachers = ReadXml<TeacherInformation>.ReadData(@"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Teachers.xml"); // add path 
+
         public AllTeachersPage()
         {
             InitializeComponent();
@@ -18,7 +21,7 @@ namespace UniversityApp
 
         private void GetList()
         {
-            foreach (var teacher in MainWindow.teachers)
+            foreach (var teacher in teachers)
             {
                 allTeachersListBox.Items.Add($"{teacher.Id}. {teacher.FirstName} {teacher.LastName}");
             }
@@ -39,7 +42,7 @@ namespace UniversityApp
 
             int teacherId = Convert.ToInt32(allTeachersListBox.SelectedValue.ToString()[0].ToString());
 
-            TeacherInformation teacherInformation = MainWindow.teachers[teacherId - 1];
+            TeacherInformation teacherInformation = teachers[teacherId - 1];
 
             TeacherInformationPage teacherInformationPage = new TeacherInformationPage();
 

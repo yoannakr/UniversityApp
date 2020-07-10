@@ -2,12 +2,22 @@
 <ArrayOfStudentInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <StudentInformation>
     <Id>1</Id>
-    <FirstName>va</FirstName>
-    <LastName>va</LastName>
-    <BirthDate>2000-07-20T00:00:00</BirthDate>
-    <Age>19</Age>
+    <FirstName>da</FirstName>
+    <LastName>da</LastName>
+    <BirthDate>1979-06-23T00:00:00</BirthDate>
+    <Age>41</Age>
     <EGN>1234567891</EGN>
     <Gender>Male</Gender>
+    <FacNo>123456798</FacNo>
+  </StudentInformation>
+  <StudentInformation>
+    <Id>2</Id>
+    <FirstName>fa</FirstName>
+    <LastName>fa</LastName>
+    <BirthDate>1969-08-03T00:00:00</BirthDate>
+    <Age>50</Age>
+    <EGN>1234567891</EGN>
+    <Gender>Female</Gender>
     <FacNo>123456789</FacNo>
   </StudentInformation>
 </ArrayOfStudentInformation>

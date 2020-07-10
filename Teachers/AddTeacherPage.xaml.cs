@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using UniversityApp.Teachers;
@@ -61,7 +62,9 @@ namespace UniversityApp
             {
                 try
                 {
-                    teacher.Id = MainWindow.teachers.Count + 1;
+                    List<TeacherInformation> teachers = ReadXml<TeacherInformation>.ReadData(@"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Teachers.xml"); // add path 
+
+                    teacher.Id = teachers.Count + 1;
                     teacher.FirstName = textBoxFirstName.Text.ToString();
                     teacher.LastName = textBoxLastName.Text.ToString();
                     teacher.BirthDate = (DateTime)(datePickerBirthDate.SelectedDate);
@@ -70,9 +73,9 @@ namespace UniversityApp
                     teacher.Subject = textBoxSubject.Text.ToString();
                     teacher.Gender = gender;
 
-                    MainWindow.teachers.Add(teacher);
+                    teachers.Add(teacher);
 
-                    SaveXml<TeacherInformation>.SaveData(MainWindow.teachers, @"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Teachers.xml"); // add path
+                    SaveXml<TeacherInformation>.SaveData(teachers, @"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Teachers.xml"); // add path
 
                     MessageBox.Show($"Teacher with last name {teacher.LastName} was added!");
                 }

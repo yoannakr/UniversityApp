@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using UniversityApp.Students;
@@ -61,7 +62,9 @@ namespace UniversityApp
             {
                 try
                 {
-                    student.Id = MainWindow.students.Count + 1;
+                    List<StudentInformation> students = ReadXml<StudentInformation>.ReadData(@"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Students.xml"); // add path 
+
+                    student.Id = students.Count + 1;
                     student.FirstName = textBoxFirstName.Text.ToString();
                     student.LastName = textBoxLastName.Text.ToString();
                     student.BirthDate = (DateTime)(datePickerBirthDate.SelectedDate);
@@ -70,9 +73,9 @@ namespace UniversityApp
                     student.FacNo = long.Parse(textBoxFacNo.Text.ToString());
                     student.Gender = gender;
 
-                    MainWindow.students.Add(student);
+                    students.Add(student);
 
-                    SaveXml<StudentInformation>.SaveData(MainWindow.students, @"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Students.xml"); // add path 
+                    SaveXml<StudentInformation>.SaveData(students, @"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Students.xml"); // add path 
                     MessageBox.Show($"Student with Fac No: {student.FacNo} was added!");
                 }
                 catch (Exception ex)
