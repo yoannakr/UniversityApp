@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using UniversityApp.DataSettings;
 using UniversityApp.Teachers;
+using static UniversityApp.DataSettings.DataSetting;
 
 namespace UniversityApp
 {
@@ -62,7 +64,7 @@ namespace UniversityApp
             {
                 try
                 {
-                    List<TeacherInformation> teachers = ReadXml<TeacherInformation>.ReadData(@"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Teachers.xml"); // add path 
+                    List<TeacherInformation> teachers = ReadXml<TeacherInformation>.ReadData(TeachersXml);
 
                     teacher.Id = teachers.Count + 1;
                     teacher.FirstName = textBoxFirstName.Text.ToString();
@@ -75,7 +77,7 @@ namespace UniversityApp
 
                     teachers.Add(teacher);
 
-                    SaveXml<TeacherInformation>.SaveData(teachers, @"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Teachers.xml"); // add path
+                    SaveXml<TeacherInformation>.SaveData(teachers, TeachersXml);
 
                     MessageBox.Show($"Teacher with last name {teacher.LastName} was added!");
                 }

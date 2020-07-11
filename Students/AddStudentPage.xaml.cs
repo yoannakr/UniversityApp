@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using UniversityApp.DataSettings;
 using UniversityApp.Students;
+using static UniversityApp.DataSettings.DataSetting;
 
 namespace UniversityApp
 {
@@ -62,7 +64,7 @@ namespace UniversityApp
             {
                 try
                 {
-                    List<StudentInformation> students = ReadXml<StudentInformation>.ReadData(@"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Students.xml"); // add path 
+                    List<StudentInformation> students = ReadXml<StudentInformation>.ReadData(StudentsXml);
 
                     student.Id = students.Count + 1;
                     student.FirstName = textBoxFirstName.Text.ToString();
@@ -75,7 +77,7 @@ namespace UniversityApp
 
                     students.Add(student);
 
-                    SaveXml<StudentInformation>.SaveData(students, @"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Students.xml"); // add path 
+                    SaveXml<StudentInformation>.SaveData(students, StudentsXml);
                     MessageBox.Show($"Student with Fac No: {student.FacNo} was added!");
                 }
                 catch (Exception ex)

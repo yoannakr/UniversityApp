@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
+using UniversityApp.DataSettings;
 using UniversityApp.Students;
+using static UniversityApp.DataSettings.DataSetting;
 
 namespace UniversityApp
 {
@@ -11,7 +13,7 @@ namespace UniversityApp
     /// </summary>
     public partial class AllStudentsPage : Page
     {
-        private readonly List<StudentInformation> students = ReadXml<StudentInformation>.ReadData(@"C:\Users\User\Desktop\19.08.2019\c#\Practice\UniversityApp\Students.xml"); // add path 
+        private readonly List<StudentInformation> students = ReadXml<StudentInformation>.ReadData(StudentsXml);
 
         public AllStudentsPage()
         {

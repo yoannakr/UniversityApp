@@ -2,7 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 
-namespace UniversityApp
+namespace UniversityApp.DataSettings
 {
     public class SaveXml<T> where T : Information
     {

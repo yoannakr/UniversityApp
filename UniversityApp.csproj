@@ -83,8 +83,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataSettings\DataSetting.cs" />
     <Compile Include="IInformation.cs" />
-    <Compile Include="ReadXml.cs" />
+    <Compile Include="DataSettings\ReadXml.cs" />
     <Compile Include="Students\AddStudentPage.xaml.cs">
       <DependentUpon>AddStudentPage.xaml</DependentUpon>
     </Compile>
@@ -98,7 +99,7 @@
       <DependentUpon>AllTeachersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Information.cs" />
-    <Compile Include="SaveXml.cs" />
+    <Compile Include="DataSettings\SaveXml.cs" />
     <Compile Include="Students\StudentInformation.cs" />
     <Compile Include="Students\StudentInformationPage.xaml.cs">
       <DependentUpon>StudentInformationPage.xaml</DependentUpon>
@@ -184,5 +185,6 @@
   <ItemGroup>
     <Resource Include="Students.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
